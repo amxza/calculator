@@ -15,18 +15,22 @@ function operate(operator, a, b) {
     if (operator === "+") {
         const sum = a + b;
         display.textContent = sum
+        return sum;
     }
     else if (operator === "-") {
         const sum = a - b;
         display.textContent = sum
+        return sum;
     }
     else if (operator === "*") {
         const sum = a * b;
         display.textContent = sum
+        return sum;
     }
     else if (operator === "/") {
         const sum = Math.floor(a / b);
         display.textContent = sum
+        return sum;
     }
 }
 
@@ -56,11 +60,12 @@ equalBtn.addEventListener("click", () => {
 })
 
 clearBtn.addEventListener("click", () => {
-    display.textContent = ""
+    display.textContent = "";
+    operator == ""
 });
 
 prevAnswer.addEventListener("click", () => {
-    if (firstOperand !== 0 && operator !== "" && secondOperand !== 0) {
+    if (firstOperand !== 0 && secondOperand !== 0) {
         operate(operator, firstOperand, secondOperand);
     }
 });
